@@ -3,260 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contextual AI for Support - Resolve Tickets Faster</title>
+    <title>Contextual AI for Support | Private Beta</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-        :root {
-            --primary-color: #4F46E5;
-            --primary-hover: #4338CA;
-            --text-color: #1F2937;
-            --text-light: #4B5563;
-            --bg-color: #F9FAFB;
-            --border-color: #D1D5DB;
-            --white-color: #FFFFFF;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
             margin: 0;
             padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
             line-height: 1.6;
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
+            min-height: 100vh;
         }
-
         .container {
-            width: 100%;
-            max-width: 680px;
-            padding: 20px;
-            box-sizing: border-box;
+            max-width: 600px;
+            margin: 20px;
+            padding: 40px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
             text-align: center;
         }
-
-        .header {
-            padding: 20px 0;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            line-height: 1.2;
-            margin: 20px 0 10px;
-            color: var(--text-color);
+            color: #343a40;
+            margin-top: 0;
+            margin-bottom: 16px;
         }
-
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 30px;
-            max-width: 550px;
-            margin-left: auto;
-            margin-right: auto;
+        .subheadline {
+            font-size: 1.1rem;
+            color: #495057;
+            max-width: 500px;
+            margin: 0 auto 32px auto;
         }
-
-        .video-placeholder {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
-            background-color: #E5E7EB;
-            border-radius: 12px;
-            margin: 30px 0 50px;
-            cursor: pointer;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-        }
-        
-        .video-placeholder::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 0;
-            height: 0;
-            border-top: 20px solid transparent;
-            border-bottom: 20px solid transparent;
-            border-left: 30px solid var(--white-color);
-            border-radius: 4px;
-            transition: transform 0.2s ease;
-        }
-
-        .video-placeholder:hover::before {
-            transform: translate(-50%, -50%) scale(1.1);
-        }
-
-        .benefits-list {
+        ul {
             list-style: none;
             padding: 0;
-            margin: 40px 0;
+            margin: 0 auto 40px auto;
             text-align: left;
+            max-width: 400px;
+            display: inline-block;
         }
-
-        .benefit-item {
+        li {
+            font-size: 1rem;
+            margin-bottom: 16px;
             display: flex;
             align-items: flex-start;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
         }
-        
-        .benefit-item svg {
-            flex-shrink: 0;
-            width: 24px;
-            height: 24px;
-            color: var(--primary-color);
-            margin-right: 15px;
-            margin-top: 2px;
+        li::before {
+            content: '✓';
+            color: #007bff;
+            font-weight: bold;
+            margin-right: 12px;
+            font-size: 1.2rem;
         }
-
-        .cta-section {
-            background-color: var(--white-color);
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-            margin-top: 30px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-        }
-
-        .cta-section h2 {
-            font-size: 1.8rem;
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .cta-section p {
-            color: var(--text-light);
-            margin-top: 0;
-            margin-bottom: 25px;
-        }
-
-        .waitlist-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .waitlist-form input[type="email"] {
+        form {
             width: 100%;
+        }
+        input[type="email"] {
+            width: 100%;
+            max-width: 400px;
             padding: 14px 16px;
             font-size: 1rem;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
             box-sizing: border-box;
+            margin-bottom: 16px;
             transition: border-color 0.2s, box-shadow 0.2s;
         }
-
-        .waitlist-form input[type="email"]:focus {
+        input[type="email"]:focus {
             outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+            border-color: #007bff;
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
         }
-
-        .waitlist-form button {
+        button {
             width: 100%;
+            max-width: 400px;
             padding: 14px 16px;
             font-size: 1rem;
             font-weight: 600;
-            color: var(--white-color);
-            background-color: var(--primary-color);
+            color: #ffffff;
+            background-color: #007bff;
             border: none;
-            border-radius: 8px;
+            border-radius: 6px;
             cursor: pointer;
             transition: background-color 0.2s;
         }
-
-        .waitlist-form button:hover {
-            background-color: var(--primary-hover);
+        button:hover {
+            background-color: #0056b3;
         }
-
-        .footer {
-            padding: 40px 20px;
-            font-size: 0.9rem;
-            color: #9CA3AF;
-        }
-
-        @media (min-width: 600px) {
-            .waitlist-form {
-                flex-direction: row;
-            }
-            .waitlist-form input[type="email"] {
-                flex-grow: 1;
-            }
-            .waitlist-form button {
-                width: auto;
-            }
+        .footer-note {
+            font-size: 0.85rem;
+            color: #6c757d;
+            margin-top: 16px;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <header class="header">
-            Contextual AI
-        </header>
-
-        <main>
-            <h1>Resolve support tickets twice as fast.</h1>
-            <p class="subtitle">Our AI plugin automatically enriches support tickets with a complete user timeline, right inside your helpdesk. Stop digging, start solving.</p>
-
-            <div class="video-placeholder" role="button" aria-label="Play Demo Video">
-                <!-- Demo video (Figma prototype or screen recording) goes here -->
-            </div>
-
-            <ul class="benefits-list">
-                <li class="benefit-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <div>
-                        <strong>Slash Resolution Times</strong><br>
-                        Eliminate agent research with an instant, complete user timeline attached to every ticket.
-                    </div>
-                </li>
-                <li class="benefit-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <div>
-                        <strong>Boost CSAT Scores</strong><br>
-                        Empower agents to deliver faster, highly-personalized responses that delight customers.
-                    </div>
-                </li>
-                <li class="benefit-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
-                    <div>
-                        <strong>Reduce Agent Burnout</strong><br>
-                        Remove the frustrating hunt for context so your team can focus on what they do best: helping users.
-                    </div>
-                </li>
-            </ul>
-
-            <section class="cta-section">
-                <h2>Be the first to get access.</h2>
-                <p>Join our private beta waitlist. No spam, just an invitation when we're ready.</p>
-                <form class="waitlist-form" action="https://formspree.io/f/xgondbgb" method="POST">
-                    <input type="hidden" name="experiment_id" value="exp_f46584c4">
-                    <input type="email" name="email" placeholder="Enter your work email" required>
-                    <button type="submit">Join the Private Beta</button>
-                </form>
-            </section>
-        </main>
+        <h1>Stop digging. Get instant user context in every ticket.</h1>
+        <p class="subheadline">
+            Our AI plugin enriches every support ticket with a user's complete activity timeline. Give your team the full picture to solve issues in minutes, not hours—without ever leaving your helpdesk.
+        </p>
         
-        <footer class="footer">
-            &copy; 2024 Contextual AI
-        </footer>
+        <ul>
+            <li>Slash ticket resolution times by eliminating manual research.</li>
+            <li>Improve customer satisfaction with faster, more accurate answers.</li>
+            <li>Empower new agents to perform like seasoned pros from day one.</li>
+        </ul>
+
+        <form action="https://formspree.io/f/xgondbgb" method="POST">
+            <input type="hidden" name="experiment_id" value="exp_f46584c4">
+            <input type="email" name="email" placeholder="Enter your work email" required>
+            <button type="submit">Join the Private Beta Waitlist</button>
+        </form>
+        
+        <p class="footer-note">Be the first to know when we launch. No spam, ever.</p>
     </div>
 
 </body>
