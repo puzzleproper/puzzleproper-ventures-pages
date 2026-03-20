@@ -3,213 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feedback Signal | Stop Drowning in User Feedback</title>
-    <style>
-        :root {
-            --brand-color: #4F46E5;
-            --brand-color-dark: #4338CA;
-            --text-color-dark: #1F2937;
-            --text-color-light: #4B5563;
-            --background-color: #F9FAFB;
-            --container-background: #FFFFFF;
-            --border-color: #D1D5DB;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-            background-color: var(--background-color);
-            color: var(--text-color-dark);
-            margin: 0;
-            padding: 20px;
-            line-height: 1.6;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .container {
-            max-width: 680px;
-            margin: 20px auto;
-            background-color: var(--container-background);
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-            text-align: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--text-color-dark);
-            margin-bottom: 30px;
-        }
-
-        h1 {
-            font-size: 42px;
-            font-weight: 800;
-            margin: 0 0 15px 0;
-            line-height: 1.2;
-            letter-spacing: -0.5px;
-        }
-
-        .subtitle {
-            font-size: 18px;
-            color: var(--text-color-light);
-            max-width: 550px;
-            margin: 0 auto 40px auto;
-        }
-
-        .benefits {
-            list-style: none;
-            padding: 0;
-            margin: 40px 0;
-            text-align: left;
-        }
-
-        .benefits li {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-
-        .benefits li::before {
-            content: '✓';
-            color: var(--brand-color);
-            font-weight: bold;
-            font-size: 20px;
-            margin-right: 12px;
-            min-width: 20px;
-        }
-
-        .mockup {
-            width: 100%;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 15px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-        }
-        
-        .mockup-caption {
-            font-size: 14px;
-            color: #6B7280;
-            margin-bottom: 40px;
-        }
-
-        .cta-box {
-            background-color: var(--background-color);
-            padding: 30px;
-            border-radius: 8px;
-            margin-top: 30px;
-        }
-
-        .cta-box h2 {
-            font-size: 22px;
-            margin: 0 0 10px 0;
-        }
-        
-        .cta-box p {
-            color: var(--text-color-light);
-            margin: 0 0 20px 0;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        input[type="email"] {
-            width: 100%;
-            max-width: 400px;
-            padding: 14px;
-            font-size: 16px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            margin-bottom: 12px;
-            box-sizing: border-box;
-            transition: border-color 0.2s, box-shadow 0.2s;
-        }
-
-        input[type="email"]:focus {
-            outline: none;
-            border-color: var(--brand-color);
-            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
-        }
-
-        button[type="submit"] {
-            width: 100%;
-            max-width: 400px;
-            padding: 14px;
-            font-size: 16px;
-            font-weight: 600;
-            color: #FFFFFF;
-            background-color: var(--brand-color);
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        button[type="submit"]:hover {
-            background-color: var(--brand-color-dark);
-        }
-        
-        .footer-note {
-            font-size: 14px;
-            color: #6B7280;
-            margin-top: 30px;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 0;
-            }
-            .container {
-                padding: 30px 20px;
-                border-radius: 0;
-                box-shadow: none;
-                margin: 0;
-            }
-            h1 {
-                font-size: 32px;
-            }
-            .subtitle {
-                font-size: 16px;
-            }
-        }
-    </style>
+    <title>Feedback Signal - AI-Powered Feedback Analysis</title>
 </head>
-<body>
+<body style="margin: 0; padding: 20px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; background-color: #f8f9fa; color: #212529; line-height: 1.6;">
 
-    <div class="container">
-        <div class="logo">Feedback Signal</div>
-        
-        <h1>Turn user feedback chaos into actionable product signals.</h1>
-        <p class="subtitle">Stop drowning in support tickets, app reviews, and Slack messages. Our AI agent monitors all your feedback channels to deliver insights and alerts that help you build better products, faster.</p>
-        
-        <img src="https://placehold.co/600x350/E8E8E8/B4B4B4?text=AI-Generated+Weekly+Digest" alt="Mockup of an AI-generated feedback digest" class="mockup">
-        <p class="mockup-caption">Get a clear, summarized view of top feedback themes every week.</p>
+    <div style="max-width: 600px; margin: 40px auto; padding: 40px; background-color: #ffffff; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-align: center;">
 
-        <ul class="benefits">
-            <li><strong>Reclaim your time.</strong> Automatically synthesize feedback from Intercom, Zendesk, App Store reviews, and more into one unified view.</li>
-            <li><strong>Act on emerging trends faster.</strong> Get proactive Slack alerts for spikes in bug reports or urgent feature requests before they escalate.</li>
-            <li><strong>Build with confidence.</strong> Back your roadmap decisions with qualitative data and uncover the "why" behind user behavior.</li>
+        <h1 style="font-size: 36px; color: #1a202c; margin-top: 0; margin-bottom: 16px; line-height: 1.2; font-weight: 700;">
+            Never miss a critical user insight again.
+        </h1>
+
+        <p style="font-size: 18px; color: #4a5568; margin-bottom: 40px;">
+            Feedback Signal is your AI agent that monitors all feedback channels, delivering summarized insights and emerging trend alerts directly into your workflow.
+        </p>
+
+        <ul style="list-style-type: none; padding: 0; margin: 0 auto 40px auto; text-align: left; max-width: 90%;">
+            <li style="display: flex; align-items: flex-start; margin-bottom: 20px; font-size: 16px;">
+                <span style="color: #2f855a; margin-right: 12px; font-weight: bold; font-size: 20px; line-height: 1.4;">✓</span>
+                <div>
+                    <strong>Save hours every week</strong> by automating analysis from sources like Intercom, Zendesk, and app store reviews.
+                </div>
+            </li>
+            <li style="display: flex; align-items: flex-start; margin-bottom: 20px; font-size: 16px;">
+                <span style="color: #2f855a; margin-right: 12px; font-weight: bold; font-size: 20px; line-height: 1.4;">✓</span>
+                <div>
+                    <strong>Get real-time alerts</strong> on emerging trends and critical issues before they escalate, delivered right to your Slack.
+                </div>
+            </li>
+            <li style="display: flex; align-items: flex-start; margin-bottom: 20px; font-size: 16px;">
+                <span style="color: #2f855a; margin-right: 12px; font-weight: bold; font-size: 20px; line-height: 1.4;">✓</span>
+                <div>
+                    <strong>Make data-driven roadmap decisions</strong> with AI-generated digests that quantify user needs and sentiment.
+                </div>
+            </li>
         </ul>
 
-        <img src="https://placehold.co/600x200/E8E8E8/B4B4B4?text=Real-time+Trend+Alert+in+Slack" alt="Mockup of a Slack alert for an emerging trend" class="mockup">
-        <p class="mockup-caption">Never miss a critical insight with alerts in your workflow.</p>
+        <form action="https://formspree.io/f/xgondbgb" method="POST" style="margin-bottom: 16px;">
+            <input type="hidden" name="experiment_id" value="exp_1d21bcbf">
+            <input type="email" name="email" placeholder="Enter your work email" required style="width: 100%; padding: 14px; margin-bottom: 16px; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 16px; box-sizing: border-box;">
+            <button type="submit" style="width: 100%; padding: 14px; border: none; border-radius: 6px; background-color: #3182ce; color: white; font-size: 16px; font-weight: bold; cursor: pointer; -webkit-appearance: none;">
+                Get Early Access
+            </button>
+        </form>
 
-        <div class="cta-box">
-            <h2>Get Early Access</h2>
-            <p>We're launching our private beta soon. Sign up to be one of the first to try Feedback Signal.</p>
-            <form action="https://formspree.io/f/xgondbgb" method="POST">
-                <input type="hidden" name="experiment_id" value="exp_1d21bcbf">
-                <input type="email" name="email" placeholder="Enter your email" required>
-                <button type="submit">Join the Private Beta</button>
-            </form>
-        </div>
-        
-        <p class="footer-note">&copy; 2024 Feedback Signal. No spam, ever.</p>
+        <p style="font-size: 14px; color: #718096; margin-top: 16px;">
+            Join product leaders from top tech companies. No spam, ever.
+        </p>
+
     </div>
 
 </body>
